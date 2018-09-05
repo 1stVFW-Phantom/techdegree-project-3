@@ -1,9 +1,28 @@
+/* --- Web Imported Fonts -- */
+
+/* font-family: 'Merriweather', serif; */
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,700');
+
 /* --- Base Styles --------- */
+
+body {
+  font-family: "Merriweather", serif;
+}
 
 h1 {
   margin: auto;
   text-transform: uppercase;
   font-size: 1.5em;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
+p {
+  font-size: .8em;
+  font-weight: 300;
 }
 
 /* --- Class Selectors ----- */
@@ -13,4 +32,17 @@ h1 {
   background-color: black;
   color: white;
   height: 80px;
+}
+
+.main-content-header {
+  margin: 0 auto;
+  padding-top: 15px;
+  text-align: center;
+  width: 90%;
+  border-bottom: 5px solid black;
+}
+
+.main-content-header p {
+  color: gray;
+  padding-bottom: 30px;
 }
