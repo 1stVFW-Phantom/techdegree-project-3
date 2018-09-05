@@ -1,0 +1,16 @@
+/* --- Base Styles --------- */
+
+h1 {
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+/* --- Class Selectors ----- */
+
+.main-header {
+  display: flex;
+  background-color: black;
+  color: white;
+  height: 80px;
+}
