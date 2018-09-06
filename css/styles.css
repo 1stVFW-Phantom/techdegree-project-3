@@ -3,10 +3,18 @@
 /* font-family: 'Merriweather', serif; */
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,700');
 
+
+/* --- Universal Selectors - */
+
+* {
+  box-sizing: border-box;
+}
+
 /* --- Base Styles --------- */
 
 body {
   font-family: "Merriweather", serif;
+  line-height: 1.5;
 }
 
 h1 {
@@ -23,6 +31,49 @@ h2 {
 p {
   font-size: .8em;
   font-weight: 300;
+}
+
+form {
+  border-top: 2px solid black;
+  margin-top: 5px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+label,
+select {
+  font-size: .75em;
+  font-weight: 300;
+}
+
+input,
+select,
+textarea {
+  background-color: #EFEFEF;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px 15px;
+  font-size: .75em;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 2px solid black;
+  outline: none; /* Gets rid of default yellow outline on focus */
+}
+
+textarea {
+  height: 100px;
 }
 
 /* --- Class Selectors ----- */
@@ -45,4 +96,55 @@ p {
 .main-content-header p {
   color: gray;
   padding-bottom: 30px;
+}
+
+.forms-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact {
+  margin-top: 30px;
+}
+
+.contact label {
+  display: block;
+  margin: 10px 0;
+}
+
+.contact-container {
+  margin-bottom: 30px;
+}
+
+.newsletter-container {
+  border-top: 2px solid black;
+}
+
+.newsletter legend {
+  padding-top: 25px;
+}
+
+/* --- Attribute selectors -- */
+/* Allows the Required placeholder to be aligned to right when NOT typing */
+input[placeholder="Required"]:not(:hover) {
+  text-align: right;
+  font-weight: 300;
+  font-style: italic;
+  font-size: .75em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  width: 10%;
+}
+
+button[type="submit"] {
+  background-color: #4EBBB5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
 }
