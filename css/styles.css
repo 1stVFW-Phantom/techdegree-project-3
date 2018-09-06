@@ -16,6 +16,11 @@ body {
   font-family: "Merriweather", serif;
   line-height: 1.5;
   color: #2D3945;
+  background-color: #EFEFEF;
+}
+
+main {
+  background-color: white;
 }
 
 h1 {
@@ -60,7 +65,8 @@ input,
 select,
 textarea {
   background-color: #EFEFEF;
-  border: none;
+  border: 2px solid rgba(1, 1, 1, 0); /* added to stop popping when input areas are focused */
+  transition: border 1s; /* for transition effect on :focus */
   border-radius: 5px;
   width: 100%;
   padding: 15px 15px 15px 0;
@@ -82,6 +88,10 @@ textarea {
 
 select {
   height: 43px; /* matches height of the other input boxes */
+}
+
+button {
+  margin-bottom: 30px;
 }
 
 /* --- Class Selectors ----- */
@@ -133,10 +143,16 @@ select {
 }
 
 .main-footer {
-  text-align: center;
-  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-style: italic;
+  background-color: #2D3945;
+  color: white;
+  height: 80px;
 }
+
+/* --- Attribute Selectors ---- */
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -160,6 +176,7 @@ button[type="submit"] {
 }
 
 /* --- Placeholder text styling -- */
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   text-align: right;
   font-weight: 300;
@@ -181,19 +198,19 @@ button[type="submit"] {
   font-style: italic;
 }
 
-/* inputs are cutting off bottom of text while
-Appearance of <section> on mobile doesn't match mock-up
-appearance of checked check boxes and radio buttons not appearing the same */
-
 @media (min-width: 768px) {
+
+  /* --- Base Styles ------------ */
+
   main {
     width: 60%;
     margin: 0 auto;
   }
 
+  /* --- Class Selectors -------- */
+
   .input-group {
     display: flex;
-    /* justify-content: space-between; */
   }
 
   .input-group label {
@@ -205,6 +222,8 @@ appearance of checked check boxes and radio buttons not appearing the same */
     width: 75%;
     margin: 10px 0;
   }
+
+  /* --- Attribute Selectors ---- */
 
   input[id="zip"] {
     width: 30%;
