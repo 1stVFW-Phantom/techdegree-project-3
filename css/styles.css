@@ -124,6 +124,12 @@ textarea {
   padding-top: 25px;
 }
 
+.main-footer {
+  text-align: center;
+  color: gray;
+  font-style: italic;
+}
+
 /* --- Attribute selectors -- */
 /* Allows the Required placeholder to be aligned to right when NOT typing */
 input[placeholder="Required"]:not(:hover) {
