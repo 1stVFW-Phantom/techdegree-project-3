@@ -137,19 +137,11 @@ select {
   font-style: italic;
 }
 
-/* --- Attribute selectors -- */
-/* Allows the Required placeholder to be aligned to right when NOT typing */
-/* input[placeholder="Required"]:not(:hover) {
-  text-align: right;
-  font-weight: 300;
-  font-style: italic;
-  font-size: .75em;
-} */
-
 input[type="checkbox"],
 input[type="radio"] {
   display: inline-block;
-  width: 10%;
+  width: auto;
+  margin-right: 10px;
 }
 
 input[id="zip"] {
@@ -188,14 +180,38 @@ button[type="submit"] {
   font-style: italic;
 }
 
-/* inputs are cutting off bottom of text
-Appearance of <section> on mobile doesn't match desktop
+/* inputs are cutting off bottom of text while
+Appearance of <section> on mobile doesn't match mock-up
 appearance of checked check boxes and radio buttons not appearing the same */
 
 @media (min-width: 768px) {
   main {
     width: 60%;
     margin: 0 auto;
+  }
+
+  .input-group {
+    display: flex;
+    /* justify-content: space-between; */
+  }
+
+  .input-group label {
+    align-self: center;
+  }
+
+  .input-group input,
+  .input-group select {
+    width: 75%;
+    margin: 10px 0;
+  }
+
+  input[id="zip"] {
+    width: 30%;
+  }
+
+  /* Selects all but the last div to bet justified with space-between */
+  .input-group:not(:last-child) {
+    justify-content: space-between;
   }
 
 }
