@@ -63,8 +63,9 @@ textarea {
   border: none;
   border-radius: 5px;
   width: 100%;
-  padding: 15px 15px;
+  padding: 15px 15px 15px 0;
   font-size: .75em;
+  text-indent: 15px;
 }
 
 input:focus,
@@ -209,6 +210,9 @@ appearance of checked check boxes and radio buttons not appearing the same */
     width: 30%;
   }
 
+  label[for="zip"] {
+    flex: .36;
+  }
   /* Selects all but the last div to bet justified with space-between */
   .input-group:not(:last-child) {
     justify-content: space-between;
