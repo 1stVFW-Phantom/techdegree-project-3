@@ -84,6 +84,7 @@ textarea:focus {
 textarea {
   height: 100px;
   resize: none;
+  margin-top: 20px;
 }
 
 select {
